@@ -34,10 +34,12 @@ eg
 - Once PR is merged pipeline will be triggered and deployed to configured staging tenant eg: myevents-stag.eu.auth.com
 - Once Staging environment is tested Send PR to master.
 
+> NOTE:  Configure ESLint Github Action in workflow.
 
-TODO:
-- prehooks to test rules for JS Error OR
-- Github Bots to check JS files for any possible syntax error.
+## Features
+- [x] Linting Rules
+- [x] Environment Agnostic
+- [x] Flexible Configuration
 
 ---
 Happy Coding :smiley:

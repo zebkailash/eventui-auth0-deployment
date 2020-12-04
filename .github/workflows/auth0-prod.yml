@@ -15,6 +15,8 @@ jobs:
           node-version: '14.x'
       - name: Install auth0-deploy-cli
         run: npm install
+      - name: Lint Rules
+        run: npm run lint
       - name: Import changes to the Auth0 production account
         env:
           AUTH0_CLIENT_SECRET: ${{ secrets.PROD_AUTH0_CLIENT_SECRET}}
