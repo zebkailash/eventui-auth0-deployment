@@ -1,0 +1,23 @@
+name: Deploy to auth0
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download file from the current repository
+        uses: actions/checkout@v2
+      - name: Install Node.JS
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install auth0-deploy-cli
+        run: npm install
+      - name: Lint Rules
+        run: npm run lint
+      - name: Import changes to the Auth0 production account
+        env:
+          AUTH0_CLIENT_SECRET: ${{ secrets.PROD_AUTH0_CLIENT_SECRET}}
+        run: npm run import:prod

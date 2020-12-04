@@ -12,10 +12,10 @@ Pre Requisites
 eg
 ```
   // branch structure for tenant
-  - development (zebpay.dev)
-  - uat (zebpay.uat)
-  - staging (zebpay.stag)
-  - prod (zebpay.prod)
+  - development (myevents-dev)
+  - uat (myevents-uat)
+  - staging (myevents-stag)
+  - prod (myevents-prod)
 ```
 
 ## Developmet Flow
@@ -24,4 +24,22 @@ eg
 ## Auth0 Configurations
   - Separate Deployment For Separate Environment
   - eg: dev-deployment, uat-deployment, stag-deployment, prod-deployment (manual)
-  
+
+
+## CI/CD Process
+- Development: All the changes to development tenant/account should be done on dashboard and then sync to your local repo using `npm run sync`
+- Review the updated changes locally
+- Push the changes to development
+- Create PR for staging branch
+- Once PR is merged pipeline will be triggered and deployed to configured staging tenant eg: myevents-stag.eu.auth.com
+- Once Staging environment is tested Send PR to master.
+
+> NOTE:  Configure ESLint Github Action in workflow.
+
+## Features
+- [x] Linting Rules
+- [x] Environment Agnostic
+- [x] Flexible Configuration
+
+---
+Happy Coding :smiley:
