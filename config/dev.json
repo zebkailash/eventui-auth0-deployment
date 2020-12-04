@@ -1,0 +1,18 @@
+{
+  "AUTH0_DOMAIN": "myevents-dev.eu.auth0.com",
+  "AUTH0_CLIENT_ID": "gSdIcCkHeKmgkt1fN3j0VIX6gwYCiciG",
+  "AUTH0_KEYWORD_REPLACE_MAPPINGS": {
+    "AUTH0_TENANT_NAME": "myevents",
+    "MANAGEMENT_API_AUDIENCE": "https://myevents-dev.eu.auth0.com/api/v2/",
+    "API_IDENTIFIER": "https://api.myevents.io",
+    "APP_CALLBACKS": [
+      "http://localhost:3000"
+    ]
+  },
+  "AUTH0_ALLOW_DELETE": false,
+  "EXCLUDED_PROPS": {
+    "clients": ["client_secret"],
+    "connections": ["options.client_secret"]
+  },
+  "AUTH0_EXCLUDED_RULES": [ ]
+}
