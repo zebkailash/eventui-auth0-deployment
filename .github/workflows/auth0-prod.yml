@@ -1,4 +1,4 @@
-name: Deploy to auth0
+name: Deploy to Auth0 Prod Tenant
 on:
   push:
     branches: [master]
