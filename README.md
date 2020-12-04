@@ -1,3 +1,7 @@
+![Build Prod](https://github.com/zebkailash/eventui-auth0-deployment/workflows/Deploy%20to%20Auth0%20Prod%20Tenant/badge.svg?branch=master)
+![Build Stag](https://github.com/zebkailash/eventui-auth0-deployment/workflows/Deploy%20to%20Auth0%20Prod%20Tenant/badge.svg?branch=staging)
+
+---
 # Autho CI/CD using auth0-cli
 It will trigger auth0 deployment when a push is done on Github branch.
 
