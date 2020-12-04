@@ -5,6 +5,7 @@ function (user, context, callback) {
   var idTokenClaims = context.idToken || {};
   var accessTokenClaims = context.accessToken || {};
 
+  // SHOULD APPEAR auto deploy setup done
   const permissions = {
     "Participant": ["event:view", "event:register", "account:deactivate"],
     "Organizer": ["event:create", "event:update",  "event:view", "event:delete"],
