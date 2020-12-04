@@ -1,4 +1,4 @@
-function (user, context, callback) {
+function setRoleOnSignup(user, context, callback) {
   // TODO: implement your rule
   var namespace = "https://myevents.tech";
   var assignedRoles = (context.authorization || {}).roles;

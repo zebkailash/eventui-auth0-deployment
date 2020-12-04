@@ -7,7 +7,8 @@
     "sync": "dotenv -- bash -c 'a0deploy export -f yaml -o settings/tenant -c ./config/dev.json --secret $DEV_AUTH0_CLIENT_SECRET'",
     "import:stag": "a0deploy import --input_file settings/tenant/tenant.yaml --config_file ./config/stag.json",
     "import:prod": "a0deploy import --input_file settings/tenant/tenant.yaml --config_file ./config/prod.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint -c .eslintrc.js ./settings/tenant/rules/*.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.14.0"
+  },
   "dependencies": {
     "dotenv-cli": "^4.0.0"
   }
