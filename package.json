@@ -18,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "auth0-deploy-cli": "^5.3.1",
     "eslint": "^7.14.0"
   },
   "dependencies": {
