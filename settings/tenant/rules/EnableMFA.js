@@ -5,6 +5,7 @@
  * @param {*} callback
  */
 function enableMFAForApp(user, context, callback) {
+  // add logic for enabling MFA for specif app.
   context.multifactor = {
     provider: 'any',
     rememberBrowser: false
