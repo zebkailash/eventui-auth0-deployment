@@ -1,7 +1,7 @@
-name: Deploy to auth0
+name: Deploy to Auth0 Stag Tenant
 on:
   push:
-    branches: [master]
+    branches: [staging]
 
 jobs:
   deploy:
