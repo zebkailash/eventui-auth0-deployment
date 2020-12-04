@@ -9,7 +9,7 @@ hooks: []
 pages: []
 resourceServers:
   - name: EventManagementAPI
-    identifier: 'https://api.myevents.io'
+    identifier: '##API_IDENTIFIER##'
     allow_offline_access: false
     enforce_policies: true
     scopes:
@@ -37,11 +37,9 @@ resourceServers:
 clients:
   - name: ' MyEventsUI FirstPartyApp'
     allowed_clients: []
-    allowed_logout_urls:
-      - 'http://localhost:3000'
+    allowed_logout_urls: @@APP_CALLBACKS@@
     app_type: spa
-    callbacks:
-      - 'http://localhost:3000'
+    callbacks: @@APP_CALLBACKS@@
     client_aliases: []
     cross_origin_auth: false
     custom_login_page_on: true
@@ -68,8 +66,6 @@ clients:
       expiration_type: expiring
     sso_disabled: false
     token_endpoint_auth_method: none
-    web_origins:
-      - 'http://localhost:3000'
   - name: API Explorer Application
     app_type: non_interactive
     cross_origin_auth: false
@@ -128,11 +124,9 @@ clients:
     token_endpoint_auth_method: client_secret_post
   - name: ThirdPartyApp
     allowed_clients: []
-    allowed_logout_urls:
-      - 'http://localhost:3000'
+    allowed_logout_urls: @@APP_CALLBACKS@@
     app_type: spa
-    callbacks:
-      - 'http://localhost:3000'
+    callbacks: @@APP_CALLBACKS@@
     client_aliases: []
     cross_origin_auth: false
     custom_login_page_on: true
@@ -233,7 +227,7 @@ emailProvider: {}
 emailTemplates: []
 clientGrants:
   - client_id: API Explorer Application
-    audience: 'https://myevents.eu.auth0.com/api/v2/'
+    audience: '##MANAGEMENT_API_AUDIENCE##'
     scope:
       - 'read:client_grants'
       - 'create:client_grants'
@@ -345,7 +339,7 @@ clientGrants:
       - 'read:role_members'
       - 'delete:role_members'
   - client_id: EventManagementAPI (Test Application)
-    audience: 'https://api.myevents.io'
+    audience: '##API_IDENTIFIER##'
     scope: []
 guardianFactors:
   - name: duo
@@ -373,22 +367,22 @@ roles:
     description: Event Organizer
     permissions:
       - permission_name: 'event:create'
-        resource_server_identifier: 'https://api.myevents.io'
+        resource_server_identifier: '##API_IDENTIFIER##'
       - permission_name: 'event:delete'
-        resource_server_identifier: 'https://api.myevents.io'
+        resource_server_identifier: '##API_IDENTIFIER##'
       - permission_name: 'event:update'
-        resource_server_identifier: 'https://api.myevents.io'
+        resource_server_identifier: '##API_IDENTIFIER##'
       - permission_name: 'event:view'
-        resource_server_identifier: 'https://api.myevents.io'
+        resource_server_identifier: '##API_IDENTIFIER##'
   - name: Participant
     description: Event Participant
     permissions:
       - permission_name: 'account:deactivate'
-        resource_server_identifier: 'https://api.myevents.io'
+        resource_server_identifier: '##API_IDENTIFIER##'
       - permission_name: 'event:register'
-        resource_server_identifier: 'https://api.myevents.io'
+        resource_server_identifier: '##API_IDENTIFIER##'
       - permission_name: 'event:unregister'
-        resource_server_identifier: 'https://api.myevents.io'
+        resource_server_identifier: '##API_IDENTIFIER##'
 branding:
   colors:
     page_background: '#000000'

@@ -1,0 +1,22 @@
+{
+  "name": "eventui-auth0-deployment",
+  "version": "1.0.0",
+  "description": "It will trigger auth0 deployment when a push is done on Github branch.",
+  "main": "index.js",
+  "scripts": {
+    "export:dev": " dotenv a0deploy export --strip --format yaml --output_folder . --config_file ./config/dev.json --secret $DEV_AUTH0_CLIENT_SECRET",
+    "import:prod": "a0deploy import --input_file tenant.yaml --config_file ./config/prod.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@zebpay.github.com:zebkailash/eventui-auth0-deployment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "dotenv-cli": "^4.0.0"
+  }
+}
